@@ -11,8 +11,6 @@ public class DataPanel
 		
 		int result = -99;
 		
-		JFileChooser fileChooser = new JFileChooser();
-		
 		if (choice.equals("save"));
 		{
 			fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
@@ -24,7 +22,7 @@ public class DataPanel
 		}
 		else
 		{
-			//result = fileChooser.showSaveDialog(this);
+			result = fileChooser.showSaveDialog(this);
 			if (result == JFileChooser.APPROVE_OPTION)
 			{
 				path = fileChooser.getSelectedFile().getAbsolutePath();
